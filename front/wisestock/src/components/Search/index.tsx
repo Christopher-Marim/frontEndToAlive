@@ -10,7 +10,7 @@ export function Search(props: InputProps) {
   const theme = cor;
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} {...props}>
     <input {...props} type={'text'} placeholder={'Buscar ação...'}/>
     <button><FiSearch size={20} ></FiSearch></button>
     </Container>

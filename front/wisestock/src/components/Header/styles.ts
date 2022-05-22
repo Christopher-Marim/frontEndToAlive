@@ -14,8 +14,8 @@ export const Container = styled.header`
   background-color: ${(props) => props.theme.background};
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   div {

@@ -6,7 +6,7 @@ export const color = {
     verdeEscuro: '#025940',
     verde: '#03a64a',
     branco: '#ffffff',
-    cinza: '#cccccc',
+    cinza: '#bbbbbb',
     backgroundCinza:'rgb(255,255,255,0.04)'
 
 }
