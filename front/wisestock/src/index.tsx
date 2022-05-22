@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import GlobalStyle from "./globalStyles";
-import { ReduxProvider } from "./hooks/state";
+import { StrockProvider } from "./contexts/state";
 import App from "./screens/home/App";
 
 const root = ReactDOM.createRoot(
@@ -10,9 +10,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ReduxProvider>
+    <StrockProvider>
       <App />
-    </ReduxProvider>
+    </StrockProvider>
     <GlobalStyle />
   </React.StrictMode>
 );
