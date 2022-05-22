@@ -10,7 +10,7 @@ import { useStrock } from "./../../hooks/useStrock";
 function App() {
   const theme = color;
 
-  const { currentStrock } = useStrock();
+  const { currentStrock, currentStrock2 } = useStrock();
   console.log(currentStrock)
 
   return (
@@ -19,8 +19,8 @@ function App() {
       <img className="imgDecoration" src={Decoration}></img>
       <Body>
         {!currentStrock.name && <HomeBody></HomeBody>}
-        {currentStrock.name && <DashboardStrockBody></DashboardStrockBody>}
-        {/* <CompareStrocksBody></CompareStrocksBody> */}
+        {(currentStrock.name && !currentStrock2.name) && <DashboardStrockBody></DashboardStrockBody>}
+        {currentStrock2.name && <CompareStrocksBody></CompareStrocksBody>} 
       </Body>
     </Container>
   );
