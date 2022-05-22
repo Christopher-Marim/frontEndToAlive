@@ -3,6 +3,7 @@ import { Container } from "./styles";
 import Logo from "../../assets/logo.svg";
 import { FiSearch } from "react-icons/fi";
 import { InputHTMLAttributes } from "react";
+import { useRedux } from "../../hooks/state";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{}
 

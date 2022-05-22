@@ -12,11 +12,10 @@ function App() {
     <Container theme={theme}>
       <Header visibleSearch={false}/>
       <img className="imgDecoration" src={Decoration}></img>
-
       <Body>
-      {/* <HomeBody></HomeBody> */}
-      <DashboardStrockBody></DashboardStrockBody>{/* 
-      <CompareStrocksBody></CompareStrocksBody> */}
+      <HomeBody></HomeBody>
+      <DashboardStrockBody></DashboardStrockBody>
+      <CompareStrocksBody></CompareStrocksBody>
       </Body>
     </Container>
   );
