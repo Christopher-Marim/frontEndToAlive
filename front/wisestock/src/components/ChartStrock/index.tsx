@@ -12,21 +12,19 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export function ChartStrock() {
+export interface DataChart {
+  name:string;
+  priceClosing:number;
+  priceClosingStrock2?:number
+}
+
+interface props {
+  data:DataChart[]
+}
+
+export function ChartStrock({data}:props) {
   const theme = color;
 
-  const data = [
-    { name: "01/2022", uv: 123, pv: 540, amt: 2400 },
-    { name: "02/2022", uv: 456, pv: 542, amt: 2400 },
-    { name: "03/2022", uv: 421, pv: 200, amt: 2400 },
-    { name: "04/2022", uv: 45, pv: 800, amt: 2400 },
-    { name: "05/2022", uv: 550, pv: 200, amt: 2400 },
-    { name: "06/2022", uv: 400, pv: 1000, amt: 2400 },
-    { name: "07/2022", uv: 200, pv: 200, amt: 2400 },
-    { name: "08/2022", uv: 350, pv: 50, amt: 2400 },
-    { name: "09/2022", uv: 600, pv: 900, amt: 2400 },
-    { name: "10/2022", uv: 550, pv: 800, amt: 2400 },
-  ];
 
   return (
     <Container theme={theme}>
@@ -57,14 +55,14 @@ export function ChartStrock() {
         <Tooltip />
         <Area
           type="monotone"
-          dataKey="uv"
+          dataKey="priceClosing"
           stroke="#82ca9d"
           fillOpacity={1}
           fill="url(#colorUv)"
         />
         <Area
           type="monotone"
-          dataKey="pv"
+          dataKey="priceClosingStrock2"
           stroke="#82ca9d"
           fillOpacity={1}
           fill="url(#colorPv)"
