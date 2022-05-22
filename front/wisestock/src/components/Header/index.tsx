@@ -15,7 +15,7 @@ export function Header({ visibleSearch }: PropsHeader) {
   return (
     <Container theme={theme}>
       <Wrapper>
-        <img src={Logo} alt="Logo WiseStrok" />
+        <img src={Logo} alt="Logo WiseStrock" />
         {visibleSearch && <Search />}
         <div>
           <button type="button" className={"buttonAbout"}>

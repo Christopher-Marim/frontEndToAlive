@@ -139,14 +139,14 @@ export const Card = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    .strokDate {
+    .strockDate {
       @media screen and (max-width: 1400px) {
         display: none;
       }
       color: ${(props) => props.theme.cinza};
     }
 
-    .strokValue {
+    .strockValue {
       color: ${(props) => props.theme.branco};
     }
   }
@@ -158,7 +158,7 @@ export const Card = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    .strokName {
+    .strockName {
       color: ${(props) => props.theme.branco};
       font-size: 28px;
       font-family: "Nunito";

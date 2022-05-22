@@ -63,11 +63,11 @@ export function HomeBody() {
         <CardsWrapper theme={theme}>
           <Card theme={theme}>
             <div className="headerCard">
-              <p className="strokDate">21 Maio 2022</p>
-              <p className="strokValue">R$1.05</p>
+              <p className="strockDate">21 Maio 2022</p>
+              <p className="strockValue">R$1.05</p>
             </div>
             <div className="bodyCard">
-              <h3 className="strokName">Any</h3>
+              <h3 className="strockName">Any</h3>
               <BsArrowRight
                 color={"white"}
                 size={26}
@@ -77,11 +77,11 @@ export function HomeBody() {
           </Card>
           <Card theme={theme} className="cardPrincipal">
             <div className="headerCard">
-              <p className="strokDate">21 Maio 2022</p>
-              <p className="strokValue">R$1.05</p>
+              <p className="strockDate">21 Maio 2022</p>
+              <p className="strockValue">R$1.05</p>
             </div>
             <div className="bodyCard">
-              <h3 className="strokName">Any</h3>
+              <h3 className="strockName">Any</h3>
               <BsArrowRight
                 color={"white"}
                 size={26}
@@ -91,11 +91,11 @@ export function HomeBody() {
           </Card>
           <Card theme={theme}>
             <div className="headerCard">
-              <p className="strokDate">21 Maio 2022</p>
-              <p className="strokValue">R$1.05</p>
+              <p className="strockDate">21 Maio 2022</p>
+              <p className="strockValue">R$1.05</p>
             </div>
             <div className="bodyCard">
-              <h3 className="strokName">Any</h3>
+              <h3 className="strockName">Any</h3>
               <BsArrowRight
                 color={"white"}
                 size={26}
