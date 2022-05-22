@@ -15,6 +15,11 @@ export const Container = styled.header`
     top:25vh;
     width:400px;
 
+    @media screen and (max-width: 1150px) {
+      top:80vh;
+      bottom:0 ;
+      filter:brightness(0.3) ;
+    }
   }
 `;
 
