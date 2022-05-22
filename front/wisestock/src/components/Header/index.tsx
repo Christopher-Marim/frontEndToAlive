@@ -16,21 +16,10 @@ export function Header({ visibleSearch }: PropsHeader) {
     <Container theme={theme}>
       <Wrapper>
         <img src={Logo} alt="Logo WiseStrock" />
-        {visibleSearch && <Search />}
-        <div>
-          <button type="button" className={"buttonAbout"}>
-            Sobre{" "}
-            <BsArrowUpRight
-              color={"white"}
-              size={16}
-              style={{ marginLeft: 10 }}
-            />
-          </button>
+        <div className="groupButtonsHeader" style={{justifyContent:!visibleSearch?"flex-end":'space-between'}}>
+          {visibleSearch && <Search style={{ width: 400 }} />}
           <button type="button" className={"buttonMenu"}>
-            <HiMenuAlt4
-              color={"white"}
-              size={40}
-            ></HiMenuAlt4>
+            <HiMenuAlt4 color={"white"} size={40}></HiMenuAlt4>
           </button>
         </div>
       </Wrapper>

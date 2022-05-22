@@ -18,12 +18,11 @@ export const Container = styled.header`
     height: 100px;
   }
 
-  div {
-    width: 100%;
+  .groupButtonsHeader {
+    width: 42%;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 
     margin: 0px 150px;

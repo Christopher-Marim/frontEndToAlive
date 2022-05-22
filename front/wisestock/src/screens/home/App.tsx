@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Container theme={theme}>
-      <Header visibleSearch={false} />
+      <Header visibleSearch={Boolean(currentStrock.name)} />
       <img className="imgDecoration" src={Decoration}></img>
       <Body>
         {!currentStrock.name && <HomeBody></HomeBody>}

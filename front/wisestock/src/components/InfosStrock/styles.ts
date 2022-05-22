@@ -44,6 +44,7 @@ export const Container = styled.div`
 export const CardsWrapper = styled.div`
   width: 100%;
   min-width:600px ;
+  max-width:1165px ;
 
 
   display: flex;
@@ -119,6 +120,7 @@ export const Card = styled.div`
 export const WrapperTitle = styled.div`
   width: 100%;
   min-width:570px ;
+  max-width:1165px ;
 
   display: flex;
   flex-direction: row;
