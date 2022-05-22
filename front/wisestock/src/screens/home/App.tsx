@@ -4,6 +4,7 @@ import { Body, Container } from "./styles";
 import Decoration from '../../assets/decoration.svg'
 import { HomeBody } from "../../components/HomeBody";
 import { DashboardStrockBody } from "../../components/DashboardStrockBody";
+import { CompareStrocksBody } from "../../components/CompareStrocksBody";
 
 function App() {
   const theme = color;
@@ -12,9 +13,10 @@ function App() {
       <Header visibleSearch={false}/>
       <img className="imgDecoration" src={Decoration}></img>
 
-      <Body>{/* 
-      <HomeBody></HomeBody> */}
-      <DashboardStrockBody></DashboardStrockBody>
+      <Body>
+      {/* <HomeBody></HomeBody> */}
+      <DashboardStrockBody></DashboardStrockBody>{/* 
+      <CompareStrocksBody></CompareStrocksBody> */}
       </Body>
     </Container>
   );

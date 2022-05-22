@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Inter', 'Nunito', Sans-Serif;
-    background-color:'#161616'
+    background-color:'#161616';
   }
 `;
  

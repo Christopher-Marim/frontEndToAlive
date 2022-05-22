@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <GlobalStyle/>
     <App />
+    <GlobalStyle/>
   </React.StrictMode>
 );

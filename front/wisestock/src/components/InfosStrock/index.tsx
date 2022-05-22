@@ -25,6 +25,10 @@ export function InfosStrock() {
         <p className="priceTitle">Maior valor esse mês</p>
             <h2>R$1.05</h2>
         </Card>
+        <Card theme={theme} style={{marginRight: 0}}>
+        <p className="priceTitle">Volume</p>
+            <h2>74503</h2>
+        </Card>
       </CardsWrapper>
     </Container>
   );

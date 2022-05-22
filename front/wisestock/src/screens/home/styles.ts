@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { color } from "./../../global/styles";
 
-export const Container = styled.header`
+export const Container = styled.main`
   display: flex;
   flex:1;
-  height:100vh ;
   flex-direction:column ;
+  min-height:100vh ;
   max-width:100vw;
-  background: ${(props) => props.theme.background};
+  background-color: ${(props) => props.theme.background};
 
   .imgDecoration{
     position: absolute;
@@ -26,5 +26,5 @@ export const Container = styled.header`
 
 export const Body = styled.main`
   flex:12;
-  margin:10px 400px 40px 150px;
+  margin:10px 550px 40px 150px;
 `;

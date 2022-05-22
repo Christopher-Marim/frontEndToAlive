@@ -117,9 +117,8 @@ export const Card = styled.div`
 `;
 
 export const WrapperTitle = styled.div`
-  width: 65%;
+  width: 100%;
   min-width:570px ;
-
 
   display: flex;
   flex-direction: row;
