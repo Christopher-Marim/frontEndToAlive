@@ -7,7 +7,7 @@ export const Container = styled.input`
     display: flex;
     align-items: center;
 
-    background-color: rgb(255,255,255,0.04);
+    background-color: ${(props) => props.theme.backgroundCinza};
     color: ${(props) => props.theme.cinza};
 
     border-radius: 8px;
@@ -23,6 +23,12 @@ export const Container = styled.input`
     border-width: 1.5px;
 
   }
+
+  @media screen and (max-width: 1150px) {
+      width:100% ;
+      padding:0px 0px ;
+      padding-inline:10px ;
+    }
 
 `;
 

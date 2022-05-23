@@ -8,17 +8,20 @@ export const Container = styled.main`
   min-height:100vh ;
   max-width:100vw;
   background-color: ${(props) => props.theme.background};
+  position: relative;
+  z-index:1 ;
 
   .imgDecoration{
     position: absolute;
     right: 0;
-    top:25vh;
+    top:30vh;
     width:400px;
+    z-index:-5 ;
 
     @media screen and (max-width: 1150px) {
-      top:80vh;
+      top:80%;
       bottom:0 ;
-      filter:opacity(0.2)  ;
+      filter:opacity(0.1)  ;
     }
   }
 `;

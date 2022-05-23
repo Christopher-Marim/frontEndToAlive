@@ -78,12 +78,21 @@ export function HomeBody() {
               onChange={onChangeInputStrock2}
             ></Input>
           </div>
+          {window.innerWidth < 1165 ? (
+            <Button
+            style={{ width: '100%', marginTop: 20, maxWidth:400}}
+            onClick={handleClickButtonCompare}
+          >
+            Comparar
+          </Button>
+          ) : (
           <Button
             style={{ width: 516, marginTop: 20 }}
             onClick={handleClickButtonCompare}
           >
             Comparar
           </Button>
+          )}
           <button
             type="button"
             className="buttonCompare"

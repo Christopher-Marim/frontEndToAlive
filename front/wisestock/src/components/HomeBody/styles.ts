@@ -80,6 +80,11 @@ export const Wrapper = styled.div`
     h1 {
       margin: 0px 20px;
     }
+    @media screen and (max-width: 1150px) {
+      flex-direction:column ;
+      width:100% ;
+      max-width:400px ;
+    }
   }
 `;
 

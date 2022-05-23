@@ -8,6 +8,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', 'Nunito', Sans-Serif;
     background-color:'#161616';
   }
+
+  * { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
 `;
  
 export default GlobalStyle;
