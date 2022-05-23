@@ -28,7 +28,6 @@ export function DashboardStrockBody() {
   return aux
  })
 
- console.log(data?.reverse)
   return (
     <Container theme={theme}>
       <InfosStrock
@@ -38,7 +37,7 @@ export function DashboardStrockBody() {
         lowPrice={min?min:0}
         size={currentSize?currentSize:0}
       ></InfosStrock>
-      <ChartStrock data={data?.reverse() as DataChart[]}></ChartStrock>
+      <ChartStrock strock1={currentStrock.name} data={data?.reverse() as DataChart[]}></ChartStrock>
     </Container>
   );
 }

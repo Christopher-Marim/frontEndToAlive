@@ -19,10 +19,12 @@ export interface DataChart {
 }
 
 interface props {
-  data:DataChart[]
+  data:DataChart[];
+  strock1:string;
+  strock2?:string;
 }
 
-export function ChartStrock({data}:props) {
+export function ChartStrock({data, strock1, strock2}:props) {
   const theme = color;
 
 
@@ -56,6 +58,7 @@ export function ChartStrock({data}:props) {
         <Area
           type="monotone"
           dataKey="priceClosing"
+          name={`Preço de ${strock1}`}
           stroke="#82ca9d"
           fillOpacity={1}
           fill="url(#colorUv)"
@@ -63,6 +66,7 @@ export function ChartStrock({data}:props) {
         <Area
           type="monotone"
           dataKey="priceClosingStrock2"
+          name={`Preço de ${strock2}`}
           stroke="#82ca9d"
           fillOpacity={1}
           fill="url(#colorPv)"
