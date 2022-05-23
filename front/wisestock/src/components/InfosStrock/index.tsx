@@ -1,41 +1,59 @@
+import { useState } from "react";
 import { FiArrowUp } from "react-icons/fi";
 import { color } from "../../global/styles";
+import { Modal } from "../Modal";
 import { Card, CardsWrapper, Container, WrapperTitle } from "./styles";
 
-interface StrockInfos{
-  name:string;
-  currentPrice:number;
-  lowPrice:number;
-  highPrice:number;
-  size:number;
+interface StrockInfos {
+  name: string;
+  currentPrice: number;
+  lowPrice: number;
+  highPrice: number;
+  size: number;
 }
 
-export function InfosStrock({name, currentPrice, lowPrice, highPrice, size}:StrockInfos) {
+export function InfosStrock({
+  name,
+  currentPrice,
+  lowPrice,
+  highPrice,
+  size,
+}: StrockInfos) {
+  const [visibleModal, setVisibleModal] = useState(false);
+
   const theme = color;
 
   return (
     <Container theme={theme}>
-        <WrapperTitle>
+      {visibleModal && <Modal onClose={() => setVisibleModal(false)}></Modal>}
+
+      <WrapperTitle>
         <h1>{name}</h1>
-        <button className="buttonSimulation">Iniciar Simulação</button>
-        </WrapperTitle>
+        <button className="buttonSimulation" onClick={()=>{setVisibleModal(true)}}>Iniciar Simulação</button>
+      </WrapperTitle>
       <CardsWrapper theme={theme}>
         <Card theme={theme} className="cardPrincipal">
-            <p className="priceTitle">Preço Atual</p>
-            <h2>{currentPrice} <FiArrowUp size={25} color={'white'} style={{marginLeft:50}}></FiArrowUp></h2>
-            
+          <p className="priceTitle">Preço Atual</p>
+          <h2>
+            {currentPrice}{" "}
+            <FiArrowUp
+              size={25}
+              color={"white"}
+              style={{ marginLeft: 50 }}
+            ></FiArrowUp>
+          </h2>
         </Card>
         <Card theme={theme}>
-        <p className="priceTitle">Menor valor esse mês</p>
-            <h2>{lowPrice}</h2>
+          <p className="priceTitle">Menor valor esse mês</p>
+          <h2>{lowPrice}</h2>
         </Card>
         <Card theme={theme}>
-        <p className="priceTitle">Maior valor esse mês</p>
-            <h2>{highPrice}</h2>
+          <p className="priceTitle">Maior valor esse mês</p>
+          <h2>{highPrice}</h2>
         </Card>
-        <Card theme={theme} style={{marginRight: 0}}>
-        <p className="priceTitle">Volume</p>
-            <h2>{size}</h2>
+        <Card theme={theme} style={{ marginRight: 0 }}>
+          <p className="priceTitle">Volume</p>
+          <h2>{size}</h2>
         </Card>
       </CardsWrapper>
     </Container>
