@@ -21,7 +21,6 @@ export const Container = styled.div`
 
 export const WrapperTitle = styled.div`
   width: 65%;
-  min-width:570px ;
 
 
   display: flex;

@@ -50,11 +50,19 @@ export const Card = styled.div`
 
   }
 
+  @media screen and (max-width: 1400px){
+    padding:10px 0px ;
+  }
+
   h2 {
     font-size: 2vw;
     font-weight: 400;
     color: white;
     font-family: "Nunito", "Inter", sans-serif;
     margin: 0px;
+
+    @media screen and (max-width: 1400px){
+    font-size: 20px;
+  }
   }
 `;

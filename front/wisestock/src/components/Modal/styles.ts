@@ -12,6 +12,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 1400px) {
+    align-items: flex-end;
+  }
+
   background-color: rgb(0, 0, 0, 0.4);
 
   z-index: 10;
@@ -19,8 +23,8 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   height: auto;
-  width:auto;
-  max-width:50% ;
+  width: auto;
+  max-width: 50%;
 
   display: flex;
   justify-content: flex-start;
@@ -36,9 +40,11 @@ export const Wrapper = styled.div`
 
   padding: 10px 40px;
 
-     @media screen and (max-width: 1400px){
-        min-height:450px ;
-
+  @media screen and (max-width: 1400px) {
+    min-height: 450px;
+    max-width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   h1 {
@@ -47,7 +53,7 @@ export const Wrapper = styled.div`
 
   p {
     text-align: center;
-    max-width:70%;
+    max-width: 70%;
 
     font-size: 18;
     color: ${(props) => props.theme.cinza};
@@ -58,22 +64,36 @@ export const Wrapper = styled.div`
 
   .group {
     width: 70%;
-
   }
 
-  .groupTexts{
-    width:100% ;
-    display:flex;
-    flex-direction: column ;
-    align-items: center ;
-    justify-content:center;
-    text-align:center ;
+  .groupTexts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
+  .buttonClose {
+    outline: none;
+    background-color: transparent;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
   }
 
   .groupInputs {
     width: 100%;
     margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {

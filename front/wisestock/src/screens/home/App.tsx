@@ -6,7 +6,6 @@ import { HomeBody } from "../../components/HomeBody";
 import { DashboardStrockBody } from "../../components/DashboardStrockBody";
 import { CompareStrocksBody } from "../../components/CompareStrocksBody";
 import { useStrock } from "./../../hooks/useStrock";
-import { Modal } from "../../components/Modal";
 
 function App() {
   const theme = color;

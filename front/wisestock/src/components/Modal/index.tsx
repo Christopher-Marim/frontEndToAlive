@@ -12,6 +12,8 @@ import { InfosSimulation } from "../InfosSimulation";
 import { Input } from "../Input";
 import { Container, Wrapper } from "./styles";
 
+import { CgClose } from "react-icons/cg";
+
 interface ModalProps {
   onClose(): void;
   strockName: string;
@@ -56,9 +58,8 @@ export function Modal({ onClose, strockName }: ModalProps) {
         setLastPrice(result.lastPrice);
         setCapitalGains(result.capitalGains);
         setPriceAtDate(result.priceAtDate);
-      }
-      else{
-        alert(result)
+      } else {
+        alert(result);
       }
     });
   };
@@ -66,15 +67,21 @@ export function Modal({ onClose, strockName }: ModalProps) {
     <Container id="modal" onClick={handleOutsideClick}>
       <Wrapper theme={theme}>
         <div className="groupTexts">
-          <h1>
-            Projeção de ganhos <strong>{strockName}</strong>
-          </h1>
+          <div style={{ display: "flex", justifyContent:'space-between', width:'100%' }}>
+            <span></span>
+            <h1>
+              Projeção de ganhos <strong>{strockName}</strong>
+            </h1>
+            <button type="button" className="buttonClose" onClick={()=>{onClose()}}>
+              <CgClose size={30} color={"white"}></CgClose>
+            </button>
+          </div>
           <p>
             A projeção de ganhos tem como objetivo auxiliar o investidor a
             simular o ganho de capital em determinado periodo.
           </p>
         </div>
-        {visibleInfos&& (
+        {visibleInfos && (
           <InfosSimulation
             quantidade={parseFloat(qtd)}
             capitalGains={capitalGains}
