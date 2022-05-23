@@ -1,4 +1,5 @@
 import { color } from "../../global/styles";
+import { InfosSimulationSkeleton } from "../InfosSimulationSkeleton";
 import { InfosStrockSkeleton } from "../InfosStrockSkeleton";
 import { Card, CardsWrapper, Container } from "./styles";
 
@@ -39,13 +40,13 @@ export function InfosSimulation({
               <h2>R${priceDateChoiced}</h2>
             </Card>
             <Card theme={theme} style={{ marginRight: 0 }}>
-              <p className="priceTitle">Ganho de Capital</p>
+              <p className="priceTitle">Ganho de Capital R$</p>
               <h2>{Math.round(capitalGains)}</h2>
             </Card>
           </CardsWrapper>
         </>
       ) : (
-        <InfosStrockSkeleton></InfosStrockSkeleton>
+        <InfosSimulationSkeleton></InfosSimulationSkeleton>
       )}
     </Container>
   );
