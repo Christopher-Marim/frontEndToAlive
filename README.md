@@ -29,4 +29,6 @@ A ideia é implementar algo simples, sem preocupações com dividendos, taxas ad
 - Extruturado o Desing do site no dia 20/05 no Figma. [Desing no figma](https://www.figma.com/file/Sid5oJxP8WmPlQC4qX6bta/Projeto-Wise-A%C3%A7%C3%B5es?node-id=0%3A1) ;
 
 
-![alt text](https://drive.google.com/file/d/1dOB6UQB_pCM5joUX9n1QU-SzwsrZU-a2/view)
+![alt text](https://trello.com/1/cards/628c1c122533391d1b8ca08f/attachments/628c1c28fdda4c28a5f1f9f5/download/web.PNG)
+
+![alt text](https://trello.com/1/cards/628c1c122533391d1b8ca08f/attachments/628c1c85f0a485571ebf27f2/download/Capturar.PNG)
