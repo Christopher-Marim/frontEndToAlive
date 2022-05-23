@@ -20,6 +20,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   height: auto;
   width:auto;
+  max-width:50% ;
 
   display: flex;
   justify-content: flex-start;

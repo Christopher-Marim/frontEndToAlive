@@ -1,6 +1,7 @@
 import React, { createContext, useState, useContext } from "react";
+import { setTimeout } from "timers";
 import { api } from "../services/api";
-import { Strock } from "./types";
+import { SimulationStrock, Strock } from "./types";
 
 interface StrockContextData {
   loading: boolean;
@@ -9,6 +10,11 @@ interface StrockContextData {
   SetLoader(status: boolean): void;
   GetCurrentStrock(name: string): void;
   CompareStrocks(name: string, name2: string): void;
+  GetSimulationStrock(
+    name: string,
+    qtd: number,
+    date: string
+  ): Promise<SimulationStrock | void>;
 }
 interface Props {
   children: JSX.Element;
@@ -22,7 +28,7 @@ const StrockProvider: React.FC<Props> = ({ children }: Props) => {
   const [currentStrock2, setCurrentStrock2] = useState<Strock>({} as Strock);
 
   async function CompareStrocks(name: string, name2: string) {
-    GetCurrentStrock(name2, setCurrentStrock2);
+    await GetCurrentStrock(name2, setCurrentStrock2);
     GetCurrentStrock(name);
   }
 
@@ -38,8 +44,25 @@ const StrockProvider: React.FC<Props> = ({ children }: Props) => {
         GetHistoryStrock(name, !action ? setCurrentStrock : action);
       })
       .catch((error) => {
-        alert(error);
+        alert("Erro ao buscar Ação 😣");
+        console.error(error);
       });
+  }
+
+  async function GetSimulationStrock(name: string, qtd: number, date: string) {
+    const res = api
+      .get(`/stocks/${name}/gains?purchasedAt=${date}&purchasedAmount=${qtd}`)
+      .then((res) => {
+        const result: SimulationStrock = res.data;
+        console.log(result);
+        return result;
+      })
+      .catch((error) => {
+        alert("Erro ao buscar Ação 😣");
+        console.error(error);
+      });
+
+    return res;
   }
 
   async function GetHistoryStrock(
@@ -78,8 +101,9 @@ const StrockProvider: React.FC<Props> = ({ children }: Props) => {
         currentStrock,
         currentStrock2,
         GetCurrentStrock,
+        GetSimulationStrock,
         SetLoader,
-        CompareStrocks
+        CompareStrocks,
       }}
     >
       {children}

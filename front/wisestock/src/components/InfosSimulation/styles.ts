@@ -17,6 +17,8 @@ export const CardsWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
+  flex-wrap:wrap ;
+
   margin-top: 20px;
 
   /*   @media screen and (max-width: 1400px){
@@ -45,6 +47,7 @@ export const Card = styled.div`
 
   .priceTitle {
     color: ${(props) => props.theme.cinza};
+
   }
 
   h2 {

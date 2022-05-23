@@ -33,15 +33,15 @@ export function InfosSimulation({
             </Card>
             <Card theme={theme}>
               <p className="priceTitle">Hoje</p>
-              <h2>R${currentPrice}</h2>
+              <h2>R${currentPrice.toFixed(1)}</h2>
             </Card>
             <Card theme={theme}>
               <p className="priceTitle">{dateChoiced}</p>
-              <h2>R${priceDateChoiced}</h2>
+              <h2>R${priceDateChoiced.toFixed(1)}</h2>
             </Card>
-            <Card theme={theme} style={{ marginRight: 0 }}>
-              <p className="priceTitle">Ganho de Capital R$</p>
-              <h2>{Math.round(capitalGains)}</h2>
+            <Card theme={theme}>
+              <p className="priceTitle">Ganho de Capital </p>
+              <h2>R${capitalGains.toFixed(1)}</h2>
             </Card>
           </CardsWrapper>
         </>

@@ -47,7 +47,7 @@ export function InfosStrock({
             <Card theme={theme} className="cardPrincipal">
               <p className="priceTitle">Preço Atual</p>
               <h2>
-                {currentPrice}{" "}
+                {currentPrice}
                 <FiArrowUp
                   size={25}
                   color={"white"}

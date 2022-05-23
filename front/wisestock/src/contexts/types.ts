@@ -13,3 +13,12 @@ export interface Strock {
   priceAt: string;
   prices?: Prices[];
 }
+
+export interface SimulationStrock {
+  name:string;
+  lastPrice:number;
+  priceAtDate:number;
+  purchasedAmount:number;
+  purchasedAt:string;
+  capitalGains:number;
+}

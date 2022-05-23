@@ -13,7 +13,12 @@ export function Search(props: InputProps) {
   const { GetCurrentStrock } = useStrock();
 
   const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setNameStrock(e.target.value);
+    if(e.target.value.length<15){
+      setNameStrock(e.target.value);
+    }
+    else{
+      return false
+    }
   };
 
   return (
