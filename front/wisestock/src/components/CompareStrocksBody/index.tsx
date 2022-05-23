@@ -83,7 +83,7 @@ export function CompareStrocksBody() {
           lowPrice={strock2?.min?strock2?.min:0}
           size={strock2?.currentSize?strock2?.currentSize:0}
         ></InfosStrock>
-        <ChartStrock strock1={currentStrock.name} strock2={currentStrock2.name} data={data as DataChart[]}></ChartStrock>
+        <ChartStrock strock1={currentStrock.name} strock2={currentStrock2.name} data={data  as DataChart[]}></ChartStrock>
       </Wrapper>
     </Container>
   );

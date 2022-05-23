@@ -18,8 +18,8 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  height: 40%;
-  width: 30%;
+  height: auto;
+  width:auto;
 
   display: flex;
   justify-content: flex-start;
@@ -46,6 +46,8 @@ export const Wrapper = styled.div`
 
   p {
     text-align: center;
+    max-width:70%;
+
     font-size: 18;
     color: ${(props) => props.theme.cinza};
   }
@@ -54,12 +56,23 @@ export const Wrapper = styled.div`
   }
 
   .group {
-    width: 60%;
+    width: 70%;
+
+  }
+
+  .groupTexts{
+    width:100% ;
+    display:flex;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content:center;
+    text-align:center ;
+
   }
 
   .groupInputs {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {

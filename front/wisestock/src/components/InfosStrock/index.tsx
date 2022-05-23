@@ -26,43 +26,52 @@ export function InfosStrock({
 
   return (
     <Container theme={theme}>
-      {visibleModal && <Modal onClose={() => setVisibleModal(false)}></Modal>}
-    {size?(
-<>
-<WrapperTitle>
-        <h1>{name}</h1>
-        <button className="buttonSimulation" onClick={()=>{setVisibleModal(true)}}>Iniciar Simulação</button>
-      </WrapperTitle>
-      <CardsWrapper theme={theme}>
-        <Card theme={theme} className="cardPrincipal">
-          <p className="priceTitle">Preço Atual</p>
-          <h2>
-            {currentPrice}{" "}
-            <FiArrowUp
-              size={25}
-              color={"white"}
-              style={{ marginLeft: 50 }}
-            ></FiArrowUp>
-          </h2>
-        </Card>
-        <Card theme={theme}>
-          <p className="priceTitle">Menor valor esse mês</p>
-          <h2>{lowPrice}</h2>
-        </Card>
-        <Card theme={theme}>
-          <p className="priceTitle">Maior valor esse mês</p>
-          <h2>{highPrice}</h2>
-        </Card>
-        <Card theme={theme} style={{ marginRight: 0 }}>
-          <p className="priceTitle">Volume</p>
-          <h2>{size}</h2>
-        </Card>
-      </CardsWrapper>
-</>
-    ):(
-<InfosStrockSkeleton></InfosStrockSkeleton>
-    )}
-      
+      {visibleModal && (
+        <Modal strockName={name} onClose={() => setVisibleModal(false)}></Modal>
+      )}
+      {size ? (
+        <>
+          <WrapperTitle>
+            <h1>{name}</h1>
+            <button
+              type="button"
+              className="buttonSimulation"
+              onClick={() => {
+                setVisibleModal(true);
+              }}
+            >
+              Iniciar Simulação
+            </button>
+          </WrapperTitle>
+          <CardsWrapper theme={theme}>
+            <Card theme={theme} className="cardPrincipal">
+              <p className="priceTitle">Preço Atual</p>
+              <h2>
+                {currentPrice}{" "}
+                <FiArrowUp
+                  size={25}
+                  color={"white"}
+                  style={{ marginLeft: 50 }}
+                ></FiArrowUp>
+              </h2>
+            </Card>
+            <Card theme={theme}>
+              <p className="priceTitle">Menor valor esse mês</p>
+              <h2>{lowPrice}</h2>
+            </Card>
+            <Card theme={theme}>
+              <p className="priceTitle">Maior valor esse mês</p>
+              <h2>{highPrice}</h2>
+            </Card>
+            <Card theme={theme} style={{ marginRight: 0 }}>
+              <p className="priceTitle">Volume</p>
+              <h2>{size}</h2>
+            </Card>
+          </CardsWrapper>
+        </>
+      ) : (
+        <InfosStrockSkeleton></InfosStrockSkeleton>
+      )}
     </Container>
   );
 }
