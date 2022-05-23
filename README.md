@@ -11,19 +11,22 @@ Para isso, a equipe de software da empresa optou por desenvolver duas aplicaçõ
 
 A ideia é implementar algo simples, sem preocupações com dividendos, taxas administrativas ou outras incumbências que afetariam o montante total. Sendo assim, pressuponha que a compradora deseja saber o quanto teria ganhado ou perdido se tivesse investido seu dinheiro numa determinada quantidade de ações de uma empresa em alguma data no passado.
 
-# Requisitos técnicos da solução
+# Passo a passo para rodar
+### `yarn` ou `npm i`
 
-- O serviço deverá ser implementado via HTTP, e o formato de serialização das requisições e respostas será JSON.
-- O frontend deverá ser um SPA(Single-Page Application) com o framework de sua escolha(React, Vue, Angular).
-- O backend já está desenvolvido, você precisará apenas criar o frontend e fazer a conexão entre as duas plataformas. Mas caso queira criar um backend também, fique à vontade.
-- Sua solução deverá ter testes automatizados.
-- Para obter dados de ações no backend, você poderá adquirir uma API_KEY gratuita no Alpha Vantage (https://www.alphavantage.co).
-- Ao final do desafio você deve enviar prints das telas funcionando.
-- O tratamento de erros não será explicitado nos endpoints. O candidato ou candidata poderá inferir casos que poderão gerar erros ou duplicidades nos dados, e tratá-los de acordo. A ausência de tratamento não desqualifica a proposta; a presença, no entanto, contará pontos a favor.
+  Para instalar as dependencias do projeto, executar na pasta wisestock
 
-# Como enviar sua proposta
+   ### `yarn start`
 
-- Clone esse repositório (Você pode utilizar o backend que ja está desenvolvido);
-- Implemente sua solução, fazendo commits da maneira que faria em um projeto profissional;
-- Substitua este README com um específico para sua aplicação, indicando como rodá-la, e como executar os testes (fique à vontade para inserir mais detalhes técnicos, caso deseje, isso conta pontos à favor);
-- Nos envie o link do seu desafio finalizado, juntamente com os prints de tela.
+   Iniciando projeto em modo desenvolvedor.\
+   Abra [http://localhost:3000](http://localhost:3000) para ver a aplicação.
+
+
+# Considerações
+- Iniciado 20/05, finalizado 23/05;
+- Responsividade feita;
+- Utilizado Axios para fazer as requisições a api;
+- Extruturado o Desing do site no dia 20/05 no Figma. [Desing no figma](https://www.figma.com/file/Sid5oJxP8WmPlQC4qX6bta/Projeto-Wise-A%C3%A7%C3%B5es?node-id=0%3A1) ;
+
+
+![alt text](https://drive.google.com/file/d/1dOB6UQB_pCM5joUX9n1QU-SzwsrZU-a2/view?usp=sharing)
