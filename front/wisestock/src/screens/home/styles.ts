@@ -18,7 +18,7 @@ export const Container = styled.main`
     @media screen and (max-width: 1150px) {
       top:80vh;
       bottom:0 ;
-      filter:brightness(0.3) ;
+      filter:opacity(0.2)  ;
     }
   }
 `;
@@ -27,4 +27,8 @@ export const Container = styled.main`
 export const Body = styled.main`
   flex:12;
   margin:10px 550px 40px 150px;
+
+  @media screen and (max-width: 1150px) {
+    margin:10px 30px 40px 30px;
+    }
 `;

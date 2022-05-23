@@ -41,9 +41,16 @@ export function HomeBody() {
       {!compareVisible && (
         <Wrapper theme={theme}>
           <span></span>
-          <h1>Olá, qual ação deseja buscar?</h1>
+          <h1>
+            Olá,
+            <br /> qual ação deseja buscar?
+          </h1>
           <h3>Trazer dashboard da ação</h3>
-          <Search style={{ width: 400, height: 50 }}></Search>
+          {window.innerWidth < 1165 ? (
+            <Search style={{ width: '100%', height: 35 }}></Search>
+          ) : (
+            <Search style={{ width: 400, height: 50 }}></Search>
+          )}
           <button
             type="button"
             className="buttonCompare"
@@ -71,7 +78,12 @@ export function HomeBody() {
               onChange={onChangeInputStrock2}
             ></Input>
           </div>
-          <Button style={{ width: 516, marginTop: 20 }} onClick={handleClickButtonCompare}>Comparar</Button>
+          <Button
+            style={{ width: 516, marginTop: 20 }}
+            onClick={handleClickButtonCompare}
+          >
+            Comparar
+          </Button>
           <button
             type="button"
             className="buttonCompare"

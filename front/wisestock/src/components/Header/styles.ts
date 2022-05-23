@@ -19,35 +19,10 @@ export const Container = styled.header`
   }
 
   .groupButtonsHeader {
-    width: 42%;
+    width: 100%;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    margin: 0px 150px;
-  }
-
-  .buttonAbout {
-    height: 42px;
-
-    align-items: center;
-    display: flex;
-
-    color: white;
-    background-color: transparent;
-
-    border-color: "white";
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 8px;
-
-    padding: 10px 27px;
-
-    font-size: 1rem;
-
-    &:hover {
-      cursor: pointer;
+    @media screen and (max-width: 1150px) {
+      margin: 0px 20px;
     }
   }
 
@@ -59,16 +34,22 @@ export const Container = styled.header`
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    margin: 0 20px;
   }
 `;
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 0px 150px;
+
+  @media screen and (max-width: 1150px) {
+    margin: 0px 20px;
+  }
 
   div {
     display: flex;

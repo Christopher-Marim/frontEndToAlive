@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.main`
   width: 100%;
-  max-height: 650px;
 
   display: flex;
   flex-direction: column;
@@ -17,6 +16,10 @@ export const Container = styled.main`
     width: 30px;
     border-radius: 10px;
   }
+
+  @media screen and (max-width: 1150px) {
+  margin-top: 0px;
+    }
 `;
 
 export const Wrapper = styled.div`
@@ -27,12 +30,24 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
 
+
   h1 {
     font-family: "Nunito";
     font-style: normal;
     font-size: 40px;
     font-weight: 400;
     color: white;
+
+    br{
+      display:none ;
+    }
+
+    @media screen and (max-width: 1150px) {
+    font-size: 30px;
+    br{
+      display:block ;
+    }
+    }
   }
   h3 {
     font-family: "Nunito";
@@ -40,6 +55,10 @@ export const Wrapper = styled.div`
     font-weight: 400;
     color: ${(props) => props.theme.cinza};
     margin-top: -20px;
+
+    @media screen and (max-width: 1150px) {
+    font-size: 20px;    
+    }
   }
 
   .buttonCompare {
@@ -80,6 +99,11 @@ export const HistoryWrapper = styled.div`
     font-size: 40px;
     font-weight: 400;
     color: white;
+
+    @media screen and (max-width: 1150px) {
+      font-size: 30px;
+
+    }
   }
 `;
 
@@ -93,8 +117,9 @@ export const CardsWrapper = styled.div`
 
   margin-top: 20px;
 
-  /*   @media screen and (max-width: 1400px){
-  } */
+  @media screen and (max-width: 1150px) {
+   flex-wrap:wrap ;
+    }
 
   .cardPrincipal {
     background: linear-gradient(
@@ -116,6 +141,7 @@ export const Card = styled.div`
     ${(props) => props.theme.ciano}
   );
   border-image-slice: 1;
+  margin-bottom: 10px;
 
   width: 260px;
   height: 116px;
@@ -132,6 +158,11 @@ export const Card = styled.div`
 
   cursor: pointer;
 
+  @media screen and (max-width: 1150px) {
+   width:100% ;
+   margin-right: 0px;
+   padding:5px 15px ;
+    }
   .headerCard {
     width: 100%;
 
@@ -139,10 +170,7 @@ export const Card = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    .strockDate {
-      @media screen and (max-width: 1400px) {
-        display: none;
-      }
+    .strockDate {  
       color: ${(props) => props.theme.cinza};
     }
 

@@ -31,6 +31,7 @@ export const Container = styled.div`
     border-bottom-right-radius: 0px;
 
     font-size: 1rem;
+
   }
 
   button {
