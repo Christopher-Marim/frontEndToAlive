@@ -28,7 +28,5 @@ A ideia é implementar algo simples, sem preocupações com dividendos, taxas ad
 - Utilizado Axios para fazer as requisições a api;
 - Extruturado o Desing do site no dia 20/05 no Figma. [Desing no figma](https://www.figma.com/file/Sid5oJxP8WmPlQC4qX6bta/Projeto-Wise-A%C3%A7%C3%B5es?node-id=0%3A1) ;
 
-
-![alt text](https://imgbox.com/8N3uInPp)
-
-![alt text](https://imgbox.com/exbUhD32)
+![My Image](./front/imageScreen/web.PNG)
+![My Image](./front/imageScreen/responsive.PNG)
