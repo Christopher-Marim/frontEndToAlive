@@ -47,7 +47,7 @@ export function HomeBody() {
           </h1>
           <h3>Trazer dashboard da ação</h3>
           {window.innerWidth < 1165 ? (
-            <Search style={{ width: '100%', height: 35 }}></Search>
+            <Search style={{ width: '100%', height: 50 }}></Search>
           ) : (
             <Search style={{ width: 400, height: 50 }}></Search>
           )}

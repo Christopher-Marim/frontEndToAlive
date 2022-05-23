@@ -48,11 +48,11 @@ export function InfosStrock({
               <p className="priceTitle">Preço Atual</p>
               <h2>
                 {currentPrice}
-                <FiArrowUp
+                {/* <FiArrowUp
                   size={25}
                   color={"white"}
                   style={{ marginLeft: 50 }}
-                ></FiArrowUp>
+                ></FiArrowUp> */}
               </h2>
             </Card>
             <Card theme={theme}>
@@ -63,8 +63,8 @@ export function InfosStrock({
               <p className="priceTitle">Maior valor esse mês</p>
               <h2>{highPrice}</h2>
             </Card>
-            <Card theme={theme} style={{ marginRight: 0 }}>
-              <p className="priceTitle">Volume</p>
+            <Card theme={theme} style={{ marginRight: 0 }} className={'cardVolume'}>
+              <p className="priceTitle">Volume atual</p>
               <h2>{size}</h2>
             </Card>
           </CardsWrapper>

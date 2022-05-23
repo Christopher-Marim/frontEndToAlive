@@ -27,25 +27,15 @@ export const Container = styled.div`
     margin-top: 10px;
     font-size: 18px;
     padding: 10px 40px;
+    margin-right: 10px;
     cursor: pointer;
-  }
-
-  .groupInputs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    h1 {
-      margin: 0px 20px;
-    }
   }
 `;
 
 export const CardsWrapper = styled.div`
   width: 100%;
-  min-width:600px ;
-  max-width:1165px ;
-
+  min-width: 600px;
+  max-width: 1165px;
 
   display: flex;
   flex-direction: row;
@@ -58,6 +48,11 @@ export const CardsWrapper = styled.div`
 
   /*   @media screen and (max-width: 1400px){
   } */
+  @media screen and (max-width: 1470px) {
+    min-width: 0;
+    margin-top: 0px;
+    max-width:600px ;
+  }
 
   .cardPrincipal {
     background: linear-gradient(
@@ -67,27 +62,39 @@ export const CardsWrapper = styled.div`
     );
 
     @media screen and (max-width: 1470px) {
-      width: 528px;
+      width: 100%;
+    }
+  }
+  .cardVolume {
+    @media screen and (max-width: 1470px) {
+      display: none;
     }
   }
 `;
 
 export const Card = styled.div`
   width: 232px;
-  height: 116px;
+  height: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 
-  padding: 0px 20px;
+  padding: 10px 20px;
   margin-right: 25px;
   margin-bottom: 15px;
 
   border-radius: 8px;
   background-color: ${(props) => props.theme.backgroundCinza};
 
+  @media screen and (max-width: 1470px) {
+    width: 47%;
+    margin-right: 10px;
+    padding:0px  20px;
+    font-size:15px ;
+    height: auto;
+  }
 
   .priceTitle {
     color: ${(props) => props.theme.cinza};
@@ -99,6 +106,10 @@ export const Card = styled.div`
     color: white;
     font-family: "Nunito", "Inter", sans-serif;
     margin: 0px;
+
+    @media screen and (max-width: 1470px) {
+    font-size:30px ;
+  }
   }
 
   .bodyCard {
@@ -119,11 +130,16 @@ export const Card = styled.div`
 
 export const WrapperTitle = styled.div`
   width: 100%;
-  min-width:570px ;
-  max-width:1165px ;
+  min-width: 570px;
+  max-width: 1165px;
 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1470px) {
+    width: 100%;
+    min-width: 0px;
+  }
 `;

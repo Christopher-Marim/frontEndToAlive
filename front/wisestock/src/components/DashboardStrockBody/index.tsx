@@ -4,6 +4,7 @@ import { useStrock } from "../../hooks/useStrock";
 import { ChartStrock, DataChart } from "../ChartStrock";
 import { InfosStrock } from "../InfosStrock";
 import { InfosStrockSkeleton } from "../InfosStrockSkeleton";
+import { Search } from "../Search";
 import { Container } from "./styles";
 
 export function DashboardStrockBody() {
@@ -35,6 +36,11 @@ export function DashboardStrockBody() {
 
   return (
     <Container theme={theme}>
+      {window.innerWidth <1400&&(
+        <div style={{marginTop:-40, width:'100%'}}>
+          <Search style={{width:'100%', height:50}} />
+        </div>
+        )}
         <InfosStrock
           name={currentStrock.name}
           currentPrice={currentStrock.lastPrice}

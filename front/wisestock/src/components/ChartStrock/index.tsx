@@ -36,7 +36,7 @@ export function ChartStrock({ data, strock1, strock2 }: props) {
       </WrapperTitle>
 
       {data ? (
-        <ResponsiveContainer width="100%" aspect={4}>
+        <ResponsiveContainer width="100%" aspect={window.innerWidth<1200? 4/2.5 :4}>
           <AreaChart
             data={data}
             margin={{ top: 10, right: 20, left: 0, bottom: 0 }}
@@ -94,7 +94,7 @@ export function ChartStrock({ data, strock1, strock2 }: props) {
         >
           <Skeleton
             height={300}
-            width={1165}
+            width={window.innerWidth-100}
             style={{ marginTop: 10 }}
           ></Skeleton>
         </SkeletonTheme>

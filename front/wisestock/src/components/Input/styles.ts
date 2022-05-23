@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.input`
     height: 50px ;
     padding:0px 15px;
+    min-width:80px ;
 
     display: flex;
     align-items: center;

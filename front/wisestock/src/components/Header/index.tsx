@@ -16,12 +16,14 @@ export function Header({ visibleSearch }: PropsHeader) {
     <Container theme={theme}>
       <Wrapper>
         <img src={Logo} alt="Logo WiseStrock" />
+        {!(window.innerWidth <1200)&&(
         <div className="groupButtonsHeader" >
-          {visibleSearch && <Search />}
+          {visibleSearch && <Search  style={{width:400}}/>}
         </div>
-          <button type="button" className={"buttonMenu"}>
+        )}
+         {/*  <button type="button" className={"buttonMenu"}>
             <HiMenuAlt4 color={"white"} size={40}></HiMenuAlt4>
-          </button>
+          </button> */}
       </Wrapper>
     </Container>
   );

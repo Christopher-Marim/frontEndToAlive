@@ -20,6 +20,7 @@ export const Container = styled.header`
 
   .groupButtonsHeader {
     width: 100%;
+    margin-left:50px ;
 
     @media screen and (max-width: 1150px) {
       margin: 0px 20px;

@@ -16,7 +16,7 @@ export function InfosStrockSkeleton() {
         highlightColor="rgb(255,255,255,0.10)"
       >
         <WrapperTitle>
-          <Skeleton height={40} width={200} />
+          <Skeleton height={40} width={100} />
           <button className="buttonSimulation">Iniciar Simulação</button>
         </WrapperTitle>
         <CardsWrapper theme={theme}>
