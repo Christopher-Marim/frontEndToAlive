@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiArrowUp } from "react-icons/fi";
 import { color } from "../../global/styles";
+import { InfosStrockSkeleton } from "../InfosStrockSkeleton";
 import { Modal } from "../Modal";
 import { Card, CardsWrapper, Container, WrapperTitle } from "./styles";
 
@@ -26,8 +27,9 @@ export function InfosStrock({
   return (
     <Container theme={theme}>
       {visibleModal && <Modal onClose={() => setVisibleModal(false)}></Modal>}
-
-      <WrapperTitle>
+    {size?(
+<>
+<WrapperTitle>
         <h1>{name}</h1>
         <button className="buttonSimulation" onClick={()=>{setVisibleModal(true)}}>Iniciar Simulação</button>
       </WrapperTitle>
@@ -56,6 +58,11 @@ export function InfosStrock({
           <h2>{size}</h2>
         </Card>
       </CardsWrapper>
+</>
+    ):(
+<InfosStrockSkeleton></InfosStrockSkeleton>
+    )}
+      
     </Container>
   );
 }
