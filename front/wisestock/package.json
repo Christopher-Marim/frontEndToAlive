@@ -50,6 +50,8 @@
     "@types/styled-components": "^5.1.25",
     "babel-jest": "^28.1.0",
     "jest": "^28.1.0",
-    "jest-dom": "^4.0.0"
+    "jest-dom": "^4.0.0",
+    "ts-jest": "^28.0.3",
+    "ts-jest-mock": "^1.1.32"
   }
 }

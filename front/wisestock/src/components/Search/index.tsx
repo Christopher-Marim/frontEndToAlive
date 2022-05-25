@@ -30,7 +30,7 @@ export function Search(props: InputProps) {
         value={nameStrock}
         onChange={onChangeInput}
       />
-      <button type="button" onClick={()=>GetCurrentStrock(nameStrock)}>
+      <button data-testid={'buttonSearch'} type="button" onClick={()=>GetCurrentStrock(nameStrock)}>
         <FiSearch size={20}></FiSearch>
       </button>
     </Container>
