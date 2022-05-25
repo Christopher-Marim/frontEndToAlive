@@ -1,4 +1,4 @@
-interface Prices{
+export interface Prices{
     opening:number;
     low:number;
     high:number;

@@ -4,37 +4,57 @@ import "@testing-library/jest-dom";
 import { createMock } from "ts-jest-mock";
 import { useStrock } from "../../hooks/useStrock";
 import { Search } from "../../components/Search";
+import { StrockProvider } from "../../contexts/state";
+
+const mockGetCurrentStrock = jest.fn();
+
+jest.mock("../../hooks/useStrock", () => {
+  return {
+    useStrock: () =>
+      ({
+        GetCurrentStrock: mockGetCurrentStrock,
+      } as any),
+  };
+});
 
 describe("Search Component", () => {
-  /* it("renders correctly", () => {
+  it("renders correctly", () => {
     render(<Search />);
 
-   expect(screen.getByPlaceholderText('Buscar ação...')).toBeInTheDocument()
+    expect(
+      screen.getByPlaceholderText(/buscar ação\.\.\./i)
+    ).toBeInTheDocument();
   });
 
-  it("load initial data", () => {
-    render(<Search />);
+  it("should be able to type on input", () => {
+    const searchbar = render(<Search />);
 
-    const GetCurrentStrockMock = createMock(useStrock().GetCurrentStrock);
+    const component = searchbar.getByPlaceholderText(/buscar ação\.\.\./i);
+    fireEvent.change(component, { target: { value: "foo" } });
 
-    const returnMock = {
-      currentStrock: {
-        name: "test",
-        lastPrice: 1,
-        priceAt: 2,
-        prices: [],
-      },
-      currentStrock2: {
-        name: "test2",
-        lastPrice: 1,
-        priceAt: 2,
-        prices: [],
-      },
-    };
+    /* @ts-ignore */
+    expect(component.value).toBe("foo");
+  });
 
-    const buttonMocked = screen.getByTestId('buttonSearch') 
-    fireEvent.click(buttonMocked)
+  it("should call custom onChangeInput when typing", () => {
+    const onChangeInput = jest.fn();
+    const searchbar = render(<Search onChange={onChangeInput} />);
 
-   screen.debug()
-  }); */
+    const input = searchbar.getByPlaceholderText(/buscar ação\.\.\./i);
+
+    fireEvent.change(input, { target: { value: "f" } });
+    fireEvent.change(input, { target: { value: "o" } });
+    fireEvent.change(input, { target: { value: "x" } });
+
+    expect(onChangeInput).toHaveBeenCalledTimes(3);
+  });
+
+  it("button search click", () => {
+    render(<Search />, { wrapper: StrockProvider });
+
+    const buttonMocked = screen.getByTestId("buttonSearch");
+    fireEvent.click(buttonMocked);
+
+    expect(mockGetCurrentStrock).toBeCalled();
+  });
 });
