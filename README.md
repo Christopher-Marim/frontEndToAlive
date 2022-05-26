@@ -21,6 +21,9 @@ A ideia é implementar algo simples, sem preocupações com dividendos, taxas ad
    Iniciando projeto em modo desenvolvedor.\
    Abra [http://localhost:3000](http://localhost:3000) para ver a aplicação.
 
+  ### `yarn test`
+  
+  Para executar os testes
 
 # Considerações
 - Iniciado 20/05, finalizado 23/05;
@@ -28,7 +31,6 @@ A ideia é implementar algo simples, sem preocupações com dividendos, taxas ad
 - Utilizado Axios para fazer as requisições a api;
 - Extruturado o Desing do site no dia 20/05 no Figma. [Desing no figma](https://www.figma.com/file/Sid5oJxP8WmPlQC4qX6bta/Projeto-Wise-A%C3%A7%C3%B5es?node-id=0%3A1) ;
 - Para testar manulamente, utilizar nomes de ações como: A, F, S ANY...(pego do backEnd);
-- Como tinha estipulado tempo de até 23/05 para entregar o projeto, não puder fazer os testes automaticos;
 
 ![My Image](./front/imageScreen/web.PNG)
 ![My Image](./front/imageScreen/responsive.PNG)
