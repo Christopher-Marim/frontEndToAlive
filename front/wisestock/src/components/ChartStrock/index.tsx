@@ -33,7 +33,7 @@ export function ChartStrock({ data, strock1, strock2 }: props) {
         <h1>Histórico</h1>
       </WrapperTitle>
 
-      {data.length ? (
+      {data?.length ? (
         <ResponsiveContainer width="100%" aspect={window.innerWidth<1200? 4/2.5 :4}>
           <AreaChart
             data={data}
