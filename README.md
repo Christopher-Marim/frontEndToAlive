@@ -1,5 +1,5 @@
 # Descrição
-
+![Logos](https://github.com/Christopher-Marim/frontEndToAlive/assets/61766440/0e1e0640-6ee3-470c-9824-d72933feb7a3)
 Uma corretora de ações está desenvolvendo um sistema para permitir que pequenos investidores possam tomar decisões melhores sobre seu portfólio. Uma das funcionalidades importantes é a de verificar o desempenho de uma ação nos seguintes cenários:
 
    - Preço atual;
@@ -28,9 +28,12 @@ A ideia é implementar algo simples, sem preocupações com dividendos, taxas ad
 # Considerações
 - Iniciado 20/05, finalizado 23/05;
 - Responsividade feita;
-- Utilizado Axios para fazer as requisições a api;
+- Utilizado 
+Axios para fazer as requisições a api;
 - Extruturado o Desing do site no dia 20/05 no Figma. [Desing no figma](https://www.figma.com/file/Sid5oJxP8WmPlQC4qX6bta/Projeto-Wise-A%C3%A7%C3%B5es?node-id=0%3A1) ;
 - Para testar manulamente, utilizar nomes de ações como: A, F, S ANY...(pego do backEnd);
 
 ![My Image](./front/imageScreen/web.PNG)
 ![My Image](./front/imageScreen/responsive.PNG)
+
+
