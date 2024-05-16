@@ -1,5 +1,6 @@
 # Descrição
-![Logos](https://github.com/Christopher-Marim/frontEndToAlive/assets/61766440/0e1e0640-6ee3-470c-9824-d72933feb7a3)
+![Logos (1)](https://github.com/Christopher-Marim/frontEndToAlive/assets/61766440/5d8ff8b2-b3a1-4dbc-8f89-5d3e656ce7f8)
+
 Uma corretora de ações está desenvolvendo um sistema para permitir que pequenos investidores possam tomar decisões melhores sobre seu portfólio. Uma das funcionalidades importantes é a de verificar o desempenho de uma ação nos seguintes cenários:
 
    - Preço atual;
